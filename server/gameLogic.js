@@ -1,14 +1,11 @@
 const pairs = [
-  { pairId: 1, texts: ['ALAN TURING', 'THE FATHER OF AI'] },
-  { pairId: 2, texts: ['WEAK AI STRONG AI', 'TYPES OF AI'] },
-  { pairId: 3, texts: ['MATRIX \n HER \n I,ROBOT \n TERMINATOR', 'MOVIES ABOUT AI'] },
-  { pairId: 4, texts: ['AUTONOMOUS VEHICLES TRAFFIC MANAGMENT NAVIGATION APPS', 'CURRENT APLICATION FOR AI'] },
-  { pairId: 5, texts: ['PERSONALIZED CONTENT ACCORDING YOUR STRENGHTS AND DIFFICULTIES', 'ADAPTATIVE LEARNING'] },
-  { pairId: 6, texts: ['USE OF VR AND AI TO CREATE INTERACTIVE DIGITAL ENVIRONMENTS', 'IMMERSIVE LEARNING'] },
-  { pairId: 7, texts: ['AIDOC', 'AI FOR HEALTHCARE'] },
-  { pairId: 8, texts: ['BIASED DECISIONS AND LESS SOCIAL INTERACTIONS', 'SOCIETAL IMPACTS OF AI'] },
-  { pairId: 9, texts: ['EVALUATES IF A MACHINE CAN IMITATE HUMAN BEHAVIOR', 'TURING TEST'] },
-  { pairId: 10, texts: ['SYSTEM TAHT REPLACES OR SUPPORTS HUMAN LABOR', 'A DEFINITION OF AI'] },
+  { pairId: 1, texts: ['A', 'A'] },
+  { pairId: 2, texts: ['B', 'B'] },
+  { pairId: 3, texts: ['C', 'C'] },
+  { pairId: 4, texts: ['D', 'D'] },
+  { pairId: 5, texts: ['F', 'F'] },
+  { pairId: 6, texts: ['G', 'G'] },
+  { pairId: 7, texts: ['H', 'H'] },
 ];
 
 function generateCards() {
