@@ -24,7 +24,7 @@ const {
 const app = express();
 const allowedOrigins = [
   "http://localhost:4200",
-  "*"
+  "https://memory-card-front-zeta.vercel.app"
 ];
 
 // 🌐 GLOBAL LOBBY
