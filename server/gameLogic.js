@@ -1,11 +1,14 @@
 const pairs = [
-  { pairId: 1, texts: ['A', 'A'] },
-  { pairId: 2, texts: ['B', 'B'] },
-  { pairId: 3, texts: ['C', 'C'] },
-  { pairId: 4, texts: ['D', 'D'] },
-  { pairId: 5, texts: ['F', 'F'] },
-  { pairId: 6, texts: ['G', 'G'] },
-  { pairId: 7, texts: ['H', 'H'] },
+  { pairId: 1, texts: ['E.M. Foster', 'Author of The Machine Stops'] },
+  { pairId: 2, texts: ['Nomophobia', 'Addiction to cell phone'] },
+  { pairId: 3, texts: ['Neuroplasticity', "Brain's ability to change and adapt"] },
+  { pairId: 4, texts: ['Culture of Immediacy', 'Expecting everything instantly'] },
+  { pairId: 5, texts: ['Attention Span Average', '47 seconds'] },
+  { pairId: 6, texts: ['Memory', 'Essential for learning and decision-making'] },
+  { pairId: 7, texts: ['Multitasking', 'Increased distraction'] },
+  { pairId: 8, texts: ['Notifications, messages', 'Instant rewards'] },
+  { pairId: 9, texts: ['Technology Dependence', 'Anxiety without devices'] },
+
 ];
 
 function generateCards() {
@@ -32,7 +35,7 @@ function startGame(room, io, serializeRoom) {
 
   room.players.forEach(p => {
     p.score = 0;
-    p.timeLeft = 60000; // ⏱️ 1 minute
+    p.timeLeft = 180000; // ⏱️ 3 minutes
   });
 
   room.players.sort(() => Math.random() - 0.5);
