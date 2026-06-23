@@ -157,7 +157,7 @@ function startGame(room, io, serializeRoom) {
 
   room.players.forEach(p => {
     p.score = 0;
-    p.timeLeft = 180000; // ⏱️ 3 minutes
+    p.timeLeft = 120000; // ⏱️ 2 minutes
   });
 
   room.players.sort(() => Math.random() - 0.5);
