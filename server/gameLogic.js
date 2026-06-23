@@ -1,25 +1,146 @@
 const pairs = [
-  { pairId: 1, texts: ['E.M. Foster', 'Author of The Machine Stops'] },
-  { pairId: 2, texts: ['Nomophobia', 'Addiction to cell phone'] },
-  { pairId: 3, texts: ['Neuroplasticity', "Brain's ability to change and adapt"] },
-  { pairId: 4, texts: ['Culture of Immediacy', 'Expecting everything instantly'] },
-  { pairId: 5, texts: ['Attention Span Average', '47 seconds'] },
-  { pairId: 6, texts: ['Memory', 'Essential for learning and decision-making'] },
-  { pairId: 7, texts: ['Multitasking', 'Increased distraction'] },
-  { pairId: 8, texts: ['Notifications, messages', 'Instant rewards'] },
-  { pairId: 9, texts: ['Technology Dependence', 'Anxiety without devices'] },
-
+  {
+    pairId: 1,
+    cards: [
+      {
+        text: 'Charges',
+        image: '/assets/cards/bull.jpg'
+      },
+      {
+        text: 'Charges',
+        image: '/assets/cards/bull.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 2,
+    cards: [
+      {
+        text: 'Leaps',
+        image: '/assets/cards/frog.png'
+      },
+      {
+        text: 'Leaps',
+        image: '/assets/cards/frog.png'
+      }
+    ]
+  },
+  {
+    pairId: 3,
+    cards: [
+      {
+        text: 'Prowls',
+        image: '/assets/cards/lion.jpg'
+      },
+      {
+        text: "Prowls",
+        image: '/assets/cards/lion.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 4,
+    cards: [
+      {
+        text: 'Waddle',
+        image: '/assets/cards/goose.jpg'
+      },
+      {
+        text: 'Waddle',
+        image: '/assets/cards/goose.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 5,
+    cards: [
+      {
+        text: 'Runs',
+        image: '/assets/cards/dog.jpg'
+      },
+      {
+        text: 'Runs',
+        image: '/assets/cards/dog.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 6,
+    cards: [
+      {
+        text: 'Steals',
+        image: '/assets/cards/cat.png'
+      },
+      {
+        text: 'Steals',
+        image: '/assets/cards/cat.png'
+      }
+    ]
+  },
+    {
+    pairId: 7,
+    cards: [
+      {
+        text: 'Flits',
+        image: '/assets/cards/bee.jpg'
+      },
+      {
+        text: 'Flits',
+        image: '/assets/cards/bee.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 8,
+    cards: [
+      {
+        text: 'Slithers',
+        image: '/assets/cards/snake.jpg'
+      },
+      {
+        text: 'Slithers',
+        image: '/assets/cards/snake.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 9,
+    cards: [
+      {
+        text: 'Trots',
+        image: '/assets/cards/pig.jpg'
+      },
+      {
+        text: 'Trots',
+        image: '/assets/cards/pig.jpg'
+      }
+    ]
+  },
+  {
+    pairId: 9,
+    cards: [
+      {
+        text: 'Lumbers',
+        image: '/assets/cards/bear.jpg'
+      },
+      {
+        text: 'Lumbers',
+        image: '/assets/cards/bear.jpg'
+      }
+    ]
+  },
 ];
 
 function generateCards() {
   const cards = pairs.flatMap(pair =>
-    pair.texts.map(text => ({
-      text,
-      pairId: pair.pairId
+    pair.cards.map(card => ({
+      pairId: pair.pairId,
+      text: card.text,
+      image: card.image
     }))
   );
 
-  // ✅ Fisher-Yates shuffle
+  // Fisher-Yates shuffle
   for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [cards[i], cards[j]] = [cards[j], cards[i]];
@@ -27,6 +148,7 @@ function generateCards() {
 
   return cards;
 }
+
 function startGame(room, io, serializeRoom) {
 
   room.gameState = {
